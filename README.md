@@ -2,44 +2,93 @@
 
 A beautiful, responsive website showcasing the rich artistic heritage of Manipur, India, with an integrated AI chatbot.
 
-## 🌟 Features
+## � Live Website
+
+**Visit the live website: [https://manipur-virtual-gallery.onrender.com](https://manipur-virtual-gallery.onrender.com)**
+
+## �🌟 Features
 
 - **Interactive Gallery**: Beautiful carousel showcasing Manipur's traditional arts
 - **AI-Powered Chatbot**: Intelligent responses about Manipur's art and culture
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile
 - **Modern UI**: Clean design with smooth animations
 
-## 🚀 Live Demo
+## 🎨 Gallery Highlights
 
-Visit the live website: [Your Website URL will go here]
+The website features an auto-playing carousel showcasing:
+- **Classical Manipuri Dance**: One of India's eight classical dance forms
+- **Traditional Handloom**: Exquisite textiles and weaving craftsmanship
+- **Pottery & Ceramics**: Beautiful ceramic art reflecting cultural heritage
+- **Traditional Paintings**: Vibrant artwork depicting cultural narratives
+- **Handicrafts**: Intricate crafts passed down through generations
+
+## 🤖 Interactive Chatbot
+
+The chatbot provides informative responses about:
+- Manipuri classical dance traditions
+- Traditional art forms and techniques
+- Cultural heritage and history
+- Handloom textiles and craftsmanship
+- Pottery and ceramic arts
 
 ## 🛠️ Technologies Used
 
 - **Frontend**: HTML5, CSS3, JavaScript
 - **Backend**: Python Flask
-- **AI**: OpenAI GPT-3.5-turbo (with fallback mock responses)
+- **Deployment**: Render.com
+- **AI**: OpenAI GPT-3.5-turbo (with intelligent fallback responses)
 - **Styling**: Custom CSS with modern design patterns
 
-## 🏃‍♂️ Quick Start
+## 🏃‍♂️ Local Development
 
-1. Clone the repository
-2. Install dependencies: `pip install -r requirements.txt`
-3. Set up your OpenAI API key in `.env`
-4. Run: `python app.py`
-5. Visit: `http://localhost:5000`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/manipur-virtual-gallery.git
+   cd manipur-virtual-gallery
+   ```
+
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+3. Run locally:
+   ```bash
+   python app.py
+   ```
+
+4. Visit: `http://localhost:5000`
 
 ## 📁 Project Structure
 
 ```
 manipur-virtual-gallery/
-├── app.py              # Flask backend
-├── requirements.txt    # Dependencies
+├── app.py              # Flask backend with chatbot logic
+├── requirements.txt    # Python dependencies
+├── runtime.txt         # Python version for deployment
 ├── templates/
 │   └── index.html     # Main HTML template
 └── static/
-    ├── css/style.css  # Styling
-    └── js/script.js   # JavaScript functionality
+    ├── css/style.css  # Modern responsive styling
+    └── js/script.js   # Interactive JavaScript features
 ```
+
+## 🎯 About Manipur's Art
+
+Manipur, known as the "Jewel of India," is renowned for:
+- **Classical Dance**: Graceful Manipuri dance with spiritual themes
+- **Handloom Textiles**: Fine quality fabrics with intricate designs
+- **Traditional Pottery**: Skilled ceramic artistry
+- **Cultural Paintings**: Vibrant depictions of mythology and culture
+- **Rich Heritage**: Blend of Hindu and indigenous traditions
+
+## 📄 License
+
+MIT License - feel free to use this project for educational and personal purposes.
+
+---
+
+**🌟 Experience the rich cultural heritage of Manipur at [manipur-virtual-gallery.onrender.com](https://manipur-virtual-gallery.onrender.com)**
 
 ## Features Overview
 
