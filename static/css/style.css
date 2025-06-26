@@ -81,7 +81,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                url('https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1920&h=1080&fit=crop') center/cover;
+                url('https://images.unsplash.com/photo-1594736797933-d0401ba395fe?w=1920&h=1080&fit=crop&q=80') center/cover;
     display: flex;
     align-items: center;
     justify-content: center;

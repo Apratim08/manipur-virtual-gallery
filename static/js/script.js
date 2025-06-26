@@ -216,11 +216,11 @@ document.addEventListener('DOMContentLoaded', () => {
 // Gallery image preloading for better performance
 function preloadImages() {
     const imageUrls = [
-        'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1578643463396-0997cb5328c1?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&h=600&fit=crop',
-        'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop'
+        'https://images.unsplash.com/photo-1594736797933-d0401ba395fe?w=800&h=600&fit=crop&q=80',
+        'https://images.unsplash.com/photo-1610461888750-10beb8d0ca6c?w=800&h=600&fit=crop&q=80',
+        'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop&q=80',
+        'https://images.unsplash.com/photo-1582555172866-f73bb12a2ab3?w=800&h=600&fit=crop&q=80',
+        'https://images.unsplash.com/photo-1610456280484-6c4b6b15b7ee?w=800&h=600&fit=crop&q=80'
     ];
     
     imageUrls.forEach(url => {
