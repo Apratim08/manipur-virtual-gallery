@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipur Virtual Art Gallery</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2>Manipur Art Gallery</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Discover the Rich Heritage of Manipur</h1>
+            <p>Explore the vibrant art, culture, and traditions of this beautiful northeastern state of India</p>
+            <button class="cta-btn" onclick="scrollToGallery()">Explore Gallery</button>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2 class="section-title">Art Gallery</h2>
+            <p class="section-subtitle">Immerse yourself in the artistic treasures of Manipur</p>
+            
+            <div class="gallery-carousel">
+                <div class="carousel-container">
+                    <div class="carousel-slide active">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=600&fit=crop" alt="Traditional Manipuri Dance">
+                        <div class="slide-content">
+                            <h3>Classical Manipuri Dance</h3>
+                            <p>The graceful and spiritual dance form that originated in Manipur, known for its lyrical and devotional themes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&h=600&fit=crop" alt="Manipuri Handloom">
+                        <div class="slide-content">
+                            <h3>Traditional Handloom</h3>
+                            <p>Exquisite handwoven textiles showcasing the skilled craftsmanship of Manipuri weavers.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1578643463396-0997cb5328c1?w=800&h=600&fit=crop" alt="Manipuri Pottery">
+                        <div class="slide-content">
+                            <h3>Traditional Pottery</h3>
+                            <p>Beautiful ceramic art forms that reflect the rich cultural heritage of Manipur.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=800&h=600&fit=crop" alt="Manipuri Paintings">
+                        <div class="slide-content">
+                            <h3>Traditional Paintings</h3>
+                            <p>Vibrant paintings depicting mythological stories and cultural narratives of Manipur.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="carousel-slide">
+                        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=800&h=600&fit=crop" alt="Manipuri Crafts">
+                        <div class="slide-content">
+                            <h3>Traditional Crafts</h3>
+                            <p>Intricate handicrafts showcasing the artistic skills passed down through generations.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn prev-btn" onclick="changeSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn next-btn" onclick="changeSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <div class="carousel-indicators">
+                    <span class="indicator active" onclick="currentSlide(1)"></span>
+                    <span class="indicator" onclick="currentSlide(2)"></span>
+                    <span class="indicator" onclick="currentSlide(3)"></span>
+                    <span class="indicator" onclick="currentSlide(4)"></span>
+                    <span class="indicator" onclick="currentSlide(5)"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Manipur's Artistic Heritage</h2>
+                    <p>Manipur, known as the "Jewel of India," is a state rich in cultural heritage and artistic traditions. The state is renowned for its classical dance forms, particularly the Manipuri dance, which is one of the eight classical dance forms of India.</p>
+                    <p>The artistic traditions of Manipur include beautiful handloom textiles, intricate pottery, vibrant paintings, and skilled craftsmanship that has been passed down through generations.</p>
+                </div>
+                <div class="about-features">
+                    <div class="feature">
+                        <i class="fas fa-palette"></i>
+                        <h3>Traditional Arts</h3>
+                        <p>Rich tradition of paintings and visual arts</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-drum"></i>
+                        <h3>Cultural Dance</h3>
+                        <p>Classical Manipuri dance and performances</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-hands"></i>
+                        <h3>Handicrafts</h3>
+                        <p>Skilled artisans creating beautiful crafts</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Have questions about Manipur's art and culture? We're here to help!</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@manipurartgallery.com</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+91 123 456 7890</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>Imphal, Manipur, India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Manipur Virtual Art Gallery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header" onclick="toggleChatbot()">
+            <i class="fas fa-comments"></i>
+            <span>Ask about Manipur's Art</span>
+            <i class="fas fa-chevron-up" id="chatbot-toggle"></i>
+        </div>
+        <div class="chatbot-messages" id="chatMessages">
+            <div class="message bot-message">
+                <p>Hello! I'm here to help you learn about Manipur's rich artistic heritage. Feel free to ask me anything about the art, culture, and traditions of Manipur!</p>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="messageInput" placeholder="Ask about Manipur's art and culture..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
