@@ -30,31 +30,34 @@ def chat():
         
         if use_mock_responses:
             print("Using mock responses due to OpenAI quota limitation")
-            # Mock responses about Manipur's art and culture
+            # Enhanced mock responses about Manipur's art and culture
             mock_responses = {
-                'dance': "Manipuri dance is one of the eight classical dance forms of India, known for its graceful movements and spiritual themes. It often depicts stories from Hindu mythology, particularly those of Radha and Krishna.",
-                'art': "Manipur is renowned for its vibrant art forms including traditional paintings, pottery, and handicrafts. The state's artists are skilled in creating beautiful textiles and intricate designs.",
-                'culture': "Manipuri culture is rich and diverse, blending Hindu and indigenous traditions. The state is famous for its festivals, traditional music, and the beautiful Manipuri language.",
-                'handloom': "Manipuri handloom textiles are famous for their intricate designs and fine quality. The traditional Manipuri shawls and fabrics are highly prized for their craftsmanship.",
-                'pottery': "Traditional Manipuri pottery showcases the artistic skills of local artisans, with beautiful ceramic works that reflect the cultural heritage of the region.",
-                'hello': "Hello! Welcome to the Manipur Virtual Art Gallery. I'm here to help you learn about the rich artistic heritage of Manipur, a beautiful state in Northeast India.",
-                'default': "Thank you for your interest in Manipur's art and culture! Manipur, known as the 'Jewel of India,' is a northeastern state rich in artistic traditions including classical dance, handloom textiles, pottery, and paintings. What specific aspect would you like to know more about?"
+                'dance': "Manipuri dance is one of India's eight classical forms, deeply rooted in Bhakti traditions. Key forms include Rasa Lila (celebrating Krishna and Radha, performed on full moon nights), Thang-Ta (martial dance with sword and spear), Pung Cholom (drum dancing with acrobatics), and Kartal Cholom (cymbal dance in Sankirtana). Renowned artists include Guru Bipin Singh, Darshana Jhaveri, and Rajkumar Singhajit Singh.",
+                'art': "Manipur's art encompasses vibrant mythological paintings that preserve ancient oral traditions, intricate handloom textiles reflecting tribal and Vaishnavite heritage, and handicrafts supported by cultural preservation efforts. These living traditions are showcased in cultural museums and heritage villages.",
+                'culture': "Manipuri culture beautifully blends tribal and Vaishnavite traditions, expressed through devotional arts performed during festivals like Lai Haraoba, Janmashtami, and Rath Yatra. The culture emphasizes spiritual devotion (bhakti rasa) and community preservation of ancient oral traditions.",
+                'handloom': "Manipuri handloom textiles showcase generations of skilled craftsmanship, reflecting the cultural heritage passed down through tribal and Vaishnavite traditions. These textiles feature intricate designs that tell stories of devotion and community identity.",
+                'pottery': "Manipuri pottery is unique - crafted without potter's wheels using paddle and anvil techniques. Famous villages include Andro (terracotta figures, ritual pots), Thongjao (red pottery), Sekmai (fermentation pots for rice beer), and Chairel (earthenware). Women from Purum and Tangkhul Naga tribes play central roles. Clay is mixed with powdered stone or serpentine stone for heat resistance, creating vessels for festivals like Lai Haraoba.",
+                'villages': "Famous pottery villages: Andro specializes in terracotta figures and ritual pots, Thongjao creates red pottery for homes, Sekmai makes fermentation pots for local rice beer, and Chairel produces earthenware and cooking pots. These villages preserve ancient hand-crafting techniques without modern potter's wheels.",
+                'hello': "Hello! Welcome to the Manipur Virtual Art Gallery. I'm here to help you explore the rich heritage of the 'Jewel of India' - from the devotional Rasa Lila dances to the ancient pottery villages of Andro and Thongjao. What would you like to discover?",
+                'default': "Thank you for your interest in Manipur's heritage! Manipur, the 'Jewel of India,' preserves ancient traditions through its pottery villages (Andro, Thongjao, Sekmai, Chairel), devotional dance forms like Rasa Lila, handloom textiles, and mythological paintings. What specific aspect would you like to explore - pottery techniques, dance forms, or cultural festivals?"
             }
             
             # Simple keyword matching for responses
             user_lower = user_message.lower()
             if any(word in user_lower for word in ['hi', 'hello', 'hey']):
                 bot_response = mock_responses['hello']
-            elif any(word in user_lower for word in ['dance', 'dancing', 'manipuri dance']):
+            elif any(word in user_lower for word in ['dance', 'dancing', 'manipuri dance', 'rasa lila', 'thang-ta', 'pung cholom']):
                 bot_response = mock_responses['dance']
             elif any(word in user_lower for word in ['art', 'painting', 'artwork']):
                 bot_response = mock_responses['art']
-            elif any(word in user_lower for word in ['culture', 'tradition', 'heritage']):
+            elif any(word in user_lower for word in ['culture', 'tradition', 'heritage', 'bhakti', 'vaishnavite']):
                 bot_response = mock_responses['culture']
             elif any(word in user_lower for word in ['handloom', 'textile', 'fabric', 'weaving']):
                 bot_response = mock_responses['handloom']
-            elif any(word in user_lower for word in ['pottery', 'ceramic', 'clay']):
+            elif any(word in user_lower for word in ['pottery', 'ceramic', 'clay', 'andro', 'thongjao', 'sekmai', 'chairel']):
                 bot_response = mock_responses['pottery']
+            elif any(word in user_lower for word in ['village', 'villages', 'community', 'artisan']):
+                bot_response = mock_responses['villages']
             else:
                 bot_response = mock_responses['default']
             
