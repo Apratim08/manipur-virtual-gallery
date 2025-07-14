@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Auto-play carousel
     setInterval(() => {
         changeSlide(1);
-    }, 5000);
+    }, 15000);
     
     // Initialize chatbot
     initializeChatbot();
